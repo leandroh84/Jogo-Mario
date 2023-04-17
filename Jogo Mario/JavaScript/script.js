@@ -1,7 +1,8 @@
 const mario = document.querySelector('.mario');
-const pipe = document.querySelector('pipe');
+const pipe = document.querySelector('.pipe');
 const jump = () => {
     mario.classList.add('.jump');
+    console.log('parei aqui', this)
     setTimeout(() => {
         mario.classList.remove('.jump');
     }, 500);
@@ -14,4 +15,4 @@ const loop = setInterval(() =>{
         pipe.style.left = `${pipePosition}px`;
     }
 }, 10);
-document.addEventListener('Keydown', jump);
+document.addEventListener('keydown', jump);
